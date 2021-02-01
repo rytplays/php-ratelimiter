@@ -44,7 +44,7 @@ $ratelimiter = new RateLimiter(new ThrottlerFactory($cacheAdapter), new Hydrator
 $loginThrottler = $ratelimiter->get('/login');
 
 // 3. Register a hit
-$loginThrottler->hit()
+$loginThrottler->hit();
 
 // 4. Check if it reached the limit
 if ($loginThrottler->check()) {
